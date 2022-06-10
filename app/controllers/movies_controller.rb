@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
   end
 
   def index
+    @sort_movie = Movie.sort_title
     @all_ratings = Movie.all_ratings
     arr_of_ratings = params[:ratings]
     if arr_of_ratings.nil?
